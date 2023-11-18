@@ -236,10 +236,14 @@
     <None Include="Formularios\App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\hombre_pulgar_arriba.png" />
+    <None Include="Resources\hombre_pulgar_arriba.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\logooooo.png" />
+    <Compile Include="Resources\logooooo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GeneradorQR-LIB\GeneradorQR-LIB.csproj">

@@ -1287,11 +1287,15 @@ namespace WindowsFormsApp2
                     }
                     if (res.Casa != null)
                     {
+                        Image imagenCasa = res.Casa.Images[0];
+                        e.Graphics.DrawImage(imagenCasa, 50, 750, 300, 300);
                         e.Graphics.DrawString("Alojamiento: " + res.Casa.Direccion + " " + res.Casa.Nropropiedad, new Font("Segoe", 20), Brushes.Black, new PointF(posX, posY));
                         posY += 50;
                     }
                     else
                     {
+                        Image imagenHotel = res.Hotel.ImagenHotel[0];
+                        e.Graphics.DrawImage(imagenHotel, 50, 750, 300, 300);
                         e.Graphics.DrawString("Alojamiento: " + res.Hotel.Nombre + "  " + res.Hotel.TipoHotel, new Font("Segoe", 20), Brushes.Black, new PointF(posX, posY));
                         posY += 50;
                         e.Graphics.DrawString("Habitacion: " + res.Habitacion.TípoPlaza + "  Nro" + res.Habitacion.NumeroHabitacion, new Font("Segoe", 20), Brushes.Black, new PointF(posX, posY));
