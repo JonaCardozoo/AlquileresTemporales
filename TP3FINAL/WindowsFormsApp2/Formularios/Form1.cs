@@ -762,10 +762,10 @@ namespace WindowsFormsApp2
                     RealizarReserva();
                     printPreviewDialog1.Document = printDocument1;
                     printPreviewDialog1.ShowDialog();
-                    if (printDialog1.ShowDialog() == DialogResult.OK)
-                    {
-                        printDocument1.Print();
-                    }
+                    //if (printDialog1.ShowDialog() == DialogResult.OK)
+                    //{
+                    //    printDocument1.Print();
+                    //}
                 }
                 else MessageBox.Show("Seleccione un alojamiento antes de reservar!", "Reserva", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -1196,7 +1196,7 @@ namespace WindowsFormsApp2
                 Image logo;
             string directorioBase = AppDomain.CurrentDomain.BaseDirectory;
             string carpetaImagenes = Path.Combine(directorioBase, "Resources");
-            string rutaImagen = Path.Combine(carpetaImagenes, "C:/Users/Administrator/Desktop/TP3FINAL/WindowsFormsApp2/Resources/logooooo.png");
+            string rutaImagen = Path.Combine(carpetaImagenes, "C:/Users/Administrator/source/repos/tpFinal/TP3FINAL/WindowsFormsApp2/Resources/logooooo.png");
             logo = Image.FromFile(rutaImagen);
 
             try
@@ -1317,8 +1317,9 @@ namespace WindowsFormsApp2
                         Image QRr = new Bitmap(QR,250,250);
                         e.Graphics.DrawImage(QRr, 500, 800);
                     }
-                    PaginaActual++;
-                    e.HasMorePages = false; 
+                    //PaginaActual++;
+                    e.HasMorePages = false;
+                    PaginaActual = 0;
                 }
                 else
                 {
